@@ -6,7 +6,17 @@ module.exports = {
 };
 
 function success(item) {
-  return { ...item };
+  const modifiedItem = {
+    ...item,
+  };
+
+  if (item.enhancement === 20) {
+    modifiedItem.enhancement;
+  } else {
+    modifiedItem.enhancement++;
+  }
+
+  return modifiedItem;
 }
 
 function fail(item) {
